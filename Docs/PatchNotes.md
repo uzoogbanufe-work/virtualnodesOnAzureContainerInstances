@@ -1,6 +1,9 @@
 # Summary of what was changed in each new release
 
 ## Chart Versions:
+### 1.3410.26081102
+- Ingesting security patches and dependency updates 🔐
+
 ### 1.3409.26080501
 - Fix for [Azure File Share mounting with MI authentication](/Docs/StorageOptions.md#azure-file-w-mi-auth) 🪪
 - Ingesting security patches and dependency updates 🔐
