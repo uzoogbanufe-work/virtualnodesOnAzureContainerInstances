@@ -255,8 +255,8 @@ spec:
             periodSeconds: 5
         - name: proxycri
           ports:
-          - name: http
-            containerPort: 50052 
+          - name: metrics
+            containerPort: 50052
             protocol: TCP
           resources:
             requests:
@@ -345,21 +345,21 @@ spec:
           startupProbe:
             httpGet:
               path: /metrics
-              port: http
+              port: metrics
             failureThreshold: 36
             periodSeconds: 5
             timeoutSeconds: 5
           livenessProbe:
             httpGet:
               path: /metrics
-              port: http
+              port: metrics
             initialDelaySeconds: 0
             periodSeconds: 30
             timeoutSeconds: 5
           readinessProbe:
             httpGet:
               path: /metrics
-              port: http
+              port: metrics
             initialDelaySeconds: 0
             periodSeconds: 5
             timeoutSeconds: 5
